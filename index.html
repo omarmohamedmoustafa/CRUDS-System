@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark">
+    <header>
+        <h3 class="text-light py-3 text-center fw-bolder text-danger">Product Management System</h3>
+    </header>
+    <div class="w-75 mx-auto">
+        <label class="text-light" for="ProductNameInput ">Product Name :</label>
+        <input oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success');validateName();" class="form-control my-3" type="text" id="ProductNameInput">
+    
+        <label class="text-light" for="ProductPriceInput ">Product Price :</label>
+        <input oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success')" class="form-control my-3" type="number" id="ProductPriceInput">
+
+        <label class="text-light" for="ProductCategoryInput ">Product Category :</label>
+        <input oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success')"  class="form-control my-3" type="text" id="ProductCategoryInput">
+
+        <label class="text-light" for="ProductDescriptionInput ">Product Describtion :</label>
+        <textarea oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success')"  class="form-control my-3" type="text" id="ProductDescriptionInput"></textarea>
+        
+        <button id="addBtn" onclick="addProductOnClick()" class="mt-2 btn btn-outline-primary btn-lg ">Add Product</button>
+        <button id="updateBtn" onclick="saveChanges()"  class="d-none mt-2 btn btn-outline-success btn-lg ">Save</button>
+        <button id="cancelUpdateBtn" onclick="noChanges()"  class="d-none mt-2 btn btn-secondary btn-lg ">Cancel</button>
+        <h4 class=" ms-3 d-inline-block text-danger" id="invalidInput"></h4>
+
+    </div>
+    
+    <div class="w-75 mx-auto pt-5 pb-3">
+        <input oninput="searchProducts(this.value);" type="text" placeholder="SearchBox" id="search" class=" form-control">
+    </div>
+
+    <div class="w-75 mx-auto text-center" >
+        <h4 class="text-danger" id="noResults"></h4>
+    </div>
+
+    <div class="container-fluid w-75 mx-auto ">
+        <div class="row">
+            <div class="col-12"></div>
+            <table class="table-hover  mt-4 table table-dark text-center ">
+                <thead class="">
+                    <tr><th>Index</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Update</th>
+                        <th>Delete</th></tr>
+                </thead>
+                <tbody id="tableEntry"></tbody>
+            </table>
+        </div>
+    </div>
+    
+
+    <script src="js/mian.js"></script>
+</body>
+</html>
