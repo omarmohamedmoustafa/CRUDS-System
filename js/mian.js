@@ -85,7 +85,7 @@ function displayProducts(arrOfProducts)
     for(var i =0 ; i < arrOfProducts.length;i++)
     {
        products+=
-       `<tr><td id:"index">${i+1}</td>
+       `
         <td>${arrOfProducts[i].productName}</td>
         <td>${arrOfProducts[i].productPrice}</td>
         <td>${arrOfProducts[i].productCategory}</td>

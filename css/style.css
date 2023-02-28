@@ -1,0 +1,41 @@
+.myinput
+{
+    background-color: rgba(255,255,255,0.01);
+    outline: none;
+    border: none;
+    -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0.8);
+}
+.body-bg
+{
+    background-color: rgba(0,0,0,0.8);
+}
+.my-table
+{
+    background-color: rgba(0,0,0,0.1);
+    color: rgba(255,255,255,0.8);
+}
+@media screen and (max-width: 1000px) {
+    .my-table {
+color: teal;
+      width: 20%;
+    }
+    .my-table button{
+        font-size: 0.875rem;
+        size: smaller;
+        padding: 0.15em;
+        border-radius: 0.25rem;
+        --bs-btn-font-size:0.875rem;
+        --bs-btn-border-radius:0.25rem
+    }
+    .my-table th{
+        font-size: smaller;
+        text-align: start;
+    }
+    .my-table td{
+        
+        font-size: smaller;
+        text-align: start;
+    }
+  }

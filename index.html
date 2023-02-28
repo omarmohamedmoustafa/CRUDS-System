@@ -9,22 +9,22 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-dark">
+<body class="body-bg">
     <header>
         <h3 class="text-light py-3 text-center fw-bolder text-danger">Product Management System</h3>
     </header>
     <div class="w-75 mx-auto">
         <label class="text-light" for="ProductNameInput ">Product Name :</label>
-        <input oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success');validateName();" class="form-control my-3" type="text" id="ProductNameInput">
+        <input oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success');validateName();" class="myinput w-100 my-3" type="text" id="ProductNameInput">
     
         <label class="text-light" for="ProductPriceInput ">Product Price :</label>
-        <input oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success')" class="form-control my-3" type="number" id="ProductPriceInput">
+        <input oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success')" class="myinput w-100 my-3" type="number" id="ProductPriceInput">
 
         <label class="text-light" for="ProductCategoryInput ">Product Category :</label>
-        <input oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success')"  class="form-control my-3" type="text" id="ProductCategoryInput">
+        <input oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success')"  class="myinput w-100 my-3" type="text" id="ProductCategoryInput">
 
         <label class="text-light" for="ProductDescriptionInput ">Product Describtion :</label>
-        <textarea oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success')"  class="form-control my-3" type="text" id="ProductDescriptionInput"></textarea>
+        <textarea oninput="updateBtn.classList.replace('btn-outline-success', 'btn-success')"  class="myinput w-100 my-3" type="text" id="ProductDescriptionInput"></textarea>
         
         <button id="addBtn" onclick="addProductOnClick()" class="mt-2 btn btn-outline-primary btn-lg ">Add Product</button>
         <button id="updateBtn" onclick="saveChanges()"  class="d-none mt-2 btn btn-outline-success btn-lg ">Save</button>
@@ -34,7 +34,8 @@
     </div>
     
     <div class="w-75 mx-auto pt-5 pb-3">
-        <input oninput="searchProducts(this.value);" type="text" placeholder="SearchBox" id="search" class=" form-control">
+        <h3 class="text-light">Search By Product Name :</h3>
+        <input oninput="searchProducts(this.value);" type="text" id="search" class="myinput w-100  ">
     </div>
 
     <div class="w-75 mx-auto text-center" >
@@ -44,9 +45,9 @@
     <div class="container-fluid w-75 mx-auto ">
         <div class="row">
             <div class="col-12"></div>
-            <table class="table-hover  mt-4 table table-dark text-center ">
+            <table class="table-bordered table mt-4 table  my-table text-center ">
                 <thead class="">
-                    <tr><th>Index</th>
+                    <tr>
                         <th>Name</th>
                         <th>Price</th>
                         <th>Category</th>
